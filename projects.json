@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Projeto ODS 3 - Streamlit",
+    "description": "Aplicação web com Streamlit focada nos Objetivos de Desenvolvimento Sustentável (ODS 3 - Saúde e Bem-estar).",
+    "tags": ["Python", "Streamlit", "Data Visualization"],
+    "url": "https://github.com/juniorrkj/projeto-ods3-streamlit",
+    "image": "url('img/projeto-ods3-streamlit.png') center/cover no-repeat"
+  },
+  {
+    "title": "Banco de Dados API em C#",
+    "description": "API desenvolvida em C# com integração a banco de dados para gerenciamento de informações.",
+    "tags": ["C#", "API", "Database", "Backend"],
+    "url": "https://github.com/juniorrkj/Banco-de-Dados-API-em-C-",
+    "image": "url('img/Banco-de-Dados-API-em-C.png') center/cover no-repeat"
+  }
+]
