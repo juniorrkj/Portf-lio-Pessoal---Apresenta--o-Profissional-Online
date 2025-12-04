@@ -1,0 +1,32 @@
+/* Estilos adicionais para imagem de perfil (opcional) */
+
+/* Adicione esta seção ao styles.css se quiser incluir uma foto de perfil na seção "Sobre" */
+
+.sobre-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    box-shadow: var(--shadow);
+}
+
+/* Para layout lado a lado em telas maiores */
+@media (min-width: 768px) {
+    .sobre-content {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .sobre-text {
+        flex: 1;
+    }
+}
+
