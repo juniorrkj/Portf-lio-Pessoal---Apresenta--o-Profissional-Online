@@ -33,3 +33,12 @@ Este é meu portfólio pessoal, onde compartilho minha jornada de aprendizado em
 Estudante de Ciência da Computação | CEUB  
 Aprendendo Java & Backend Development
 
+
+## 📣 GitHub Pages
+
+O site deste portfólio está publicado pelo GitHub Pages neste link:
+
+https://juniorrkj.github.io/Portf-lio-Pessoal---Apresenta--o-Profissional-Online/
+
+Se quiser que eu atualize a URL (por exemplo para `https://seu-dominio.com` ou uma rota diferente), me avise.
+
