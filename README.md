@@ -39,6 +39,3 @@ Aprendendo Java & Backend Development
 O site deste portfólio está publicado pelo GitHub Pages neste link:
 
 https://juniorrkj.github.io/Portf-lio-Pessoal---Apresenta--o-Profissional-Online/
-
-Se quiser que eu atualize a URL (por exemplo para `https://seu-dominio.com` ou uma rota diferente), me avise.
-
