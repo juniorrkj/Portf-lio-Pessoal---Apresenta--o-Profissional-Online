@@ -1,0 +1,29 @@
+[
+  {
+    "category": "Java & Backend",
+    "items": [
+      "Java (Estudando)",
+      "Spring Boot (Aprendendo)",
+      "POO & Fundamentos",
+      "REST APIs"
+    ]
+  },
+  {
+    "category": "Banco de Dados",
+    "items": [
+      "SQL (MySQL, PostgreSQL)",
+      "Modelagem de Dados",
+      "JDBC",
+      "Conceitos de Persistência"
+    ]
+  },
+  {
+    "category": "Ferramentas & Práticas",
+    "items": [
+      "Git & GitHub",
+      "Maven/Gradle",
+      "IntelliJ IDEA / Eclipse",
+      "Lógica de Programação"
+    ]
+  }
+]

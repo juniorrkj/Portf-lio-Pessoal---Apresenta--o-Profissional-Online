@@ -117,21 +117,32 @@ async function loadProjects() {
     if (!container) return;
 
     try {
+<<<<<<< HEAD
         const res = await fetch('projects.json');
         if (!res.ok) throw new Error('Falha ao carregar projects.json');
         const projects = await res.json();
+=======
+        let projects = [];
+        
+        // Tentar carregar do localStorage (gerenciado pelo admin)
+        const storedProjects = localStorage.getItem('portfolio_projects');
+        
+        if (storedProjects) {
+            projects = JSON.parse(storedProjects);
+        try {
+            let projects = [];
 
-        projects.forEach(p => {
-            const card = document.createElement('article');
-            card.className = 'projeto-card';
-            card.innerHTML = `
-                <div class="projeto-image" style="background: ${p.image || 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}"></div>
-                <h3>${p.title}</h3>
-                <p>${p.description}</p>
-                <div class="projeto-tags">
-                    ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
-                </div>
-                <div style="padding:0 1.5rem 1rem;">
+            // Tentar carregar do localStorage (gerenciado pelo admin)
+            const storedProjects = localStorage.getItem('portfolio_projects');
+
+            if (storedProjects) {
+                projects = JSON.parse(storedProjects);
+            } else {
+                // Carregar do JSON original se não houver no localStorage
+                const res = await fetch('projects.json');
+                if (!res.ok) throw new Error('Falha ao carregar projects.json');
+                projects = await res.json();
+            }
                     <a href="${p.url || '#'}" class="btn btn-secondary" target="_blank" rel="noopener">Ver Projeto</a>
                 </div>
             `;
@@ -145,6 +156,48 @@ async function loadProjects() {
     }
 }
 
+// ==================== Carregar habilidades dinamicamente ====================
+async function loadSkills() {
+    const container = document.querySelector('.habilidades-grid');
+    if (!container) return;
+
+    try {
+        let skills = [];
+
+        // Tentar carregar do localStorage (gerenciado pelo admin)
+        const storedSkills = localStorage.getItem('portfolio_skills');
+
+        if (storedSkills) {
+            skills = JSON.parse(storedSkills);
+        } else {
+            // Carregar do JSON original se não houver no localStorage
+            const res = await fetch('skills.json');
+            if (res.ok) {
+                skills = await res.json();
+            }
+        }
+
+        if (skills.length > 0) {
+            // Limpar container e adicionar habilidades
+            container.innerHTML = '';
+
+            skills.forEach(skill => {
+                const skillItem = document.createElement('div');
+                skillItem.className = 'habilidade-item';
+                skillItem.innerHTML = `
+                    <h3>${skill.category}</h3>
+                    <ul>
+                        ${skill.items.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                `;
+                container.appendChild(skillItem);
+                observer.observe(skillItem);
+            });
+        }
+    } catch (err) {
+        console.error('Erro ao carregar habilidades:', err);
+    }
+}
 // ==================== Formulário de Contato ====================
 function setupContactForm() {
     const form = document.getElementById('contact-form');
@@ -193,10 +246,16 @@ window.addEventListener('load', () => {
     if (heroSubtitle) heroSubtitle.style.animation = 'slideDown 0.8s ease 0.2s forwards';
 
     loadProjects();
+<<<<<<< HEAD
     setupContactForm();
     initCarousel();
     // observar items de habilidades
     document.querySelectorAll('.habilidade-item').forEach(item => observer.observe(item));
+=======
+    loadSkills();
+    setupContactForm();
+    initCarousel();
+>>>>>>> bc169cb (Initial commit: add admin panel and config example)
 });
 
 // ==================== Carrossel de Fotos ====================

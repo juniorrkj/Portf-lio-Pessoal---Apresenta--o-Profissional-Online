@@ -1,0 +1,7 @@
+# Ignorar configuração admin local que contém o hash
+admin-config.json
+
+# Node / IDE (exemplos)
+node_modules/
+.vscode/
+.DS_Store
